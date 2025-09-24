@@ -1,0 +1,21 @@
+import React, { useEffect, useState } from 'react'
+import { api } from '../lib/api'
+
+
+export default function Leaderboard(){
+const [rows, setRows] = useState<[string,number][]>([] as any)
+useEffect(()=>{ (async()=>{
+const res = await fetch((import.meta.env.VITE_API_BASE||'http://localhost:8000')+"/roles/leaderboard/top")
+const j = await res.json(); setRows(j.leaderboard||[])
+})() },[])
+return (
+<div className="card">
+<div className="font-semibold mb-2">Leaderboard</div>
+<div className="space-y-1">
+{rows.map(([u,s],i)=> (
+<div className="flex justify-between" key={i}><span>{i+1}. {u}</span><span className="badge">{s}</span></div>
+))}
+</div>
+</div>
+)
+}

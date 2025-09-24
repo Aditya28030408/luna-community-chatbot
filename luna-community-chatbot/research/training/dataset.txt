@@ -1,0 +1,3 @@
+Labels used: announcement, important, spam, casual, greeting
+Store dataset as CSV with columns: text,label
+Example row: "Standup at 10am today, please be on time",announcement

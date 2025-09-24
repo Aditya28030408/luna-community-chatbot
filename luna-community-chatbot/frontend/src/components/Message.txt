@@ -1,0 +1,12 @@
+import React from 'react'
+export default function Message({ who, text, label }: { who: string, text: string, label?: string }) {
+return (
+<div className="flex gap-3 items-start">
+<div className="badge">{who}</div>
+<div className="card flex-1">
+<div className="text-sm text-gray-400">{label}</div>
+<div className="mt-1">{text}</div>
+</div>
+</div>
+)
+}

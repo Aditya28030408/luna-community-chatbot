@@ -1,0 +1,4 @@
+import React from 'react'
+export default function RoleBadges({ role }:{ role: string }){
+return <span className="badge">{role}</span>
+}

@@ -1,0 +1,20 @@
+import React from 'react'
+import Chat from './components/Chat'
+import PollWidget from './components/PollWidget'
+import Leaderboard from './components/Leaderboard'
+
+
+export default function App(){
+return (
+<div className="max-w-5xl mx-auto p-6 grid md:grid-cols-3 gap-6">
+<div className="md:col-span-2 space-y-6">
+<div className="card"><h1 className="text-2xl font-bold">Luna — AI Community Chat</h1></div>
+<Chat />
+</div>
+<div className="space-y-6">
+<PollWidget />
+<Leaderboard />
+</div>
+</div>
+)
+}
